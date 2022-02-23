@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STONE PAPER SCISSOR HOME</title>
+        <meta charset="UTF-8"/>
+        <meta author="sasi" content="stone paper scissor game"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+       <style>
+
+        body{
+            color:aquamarine;
+            background-image: url("scissor.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            background-attachment: fixed;
+        }
+
+        div{
+            height: 100px;
+        }
+
+            #d1{
+                color:aquamarine;
+                text-align: center;
+                display: flex;
+                justify-content:space-around;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                top:160px;
+
+
+            }
+           
+            input[type="text"]{
+                width: 300px;
+                height: 30px;
+                border: 2px solid black;
+                border-radius: 25px;
+                font-size: 20px;
+                outline: none;
+            }
+
+            label{
+                font-size: 30px;
+
+            }
+
+            #d2{
+
+                position: relative;
+                top:180px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            
+
+ input[type="submit"]{
+     width:80px;
+     height:60px;
+     border:2px solid black;
+     border-radius: 25px;
+     background-color: rgb(40, 40, 221);
+     font-size: 20px;
+     color:antiquewhite;
+     margin-top:40px;
+     outline: none;
+ }
+            
+            
+ #d3{
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+     align-items: center;
+ }
+
+ a{
+     color:aquamarine;
+     font-size: 20px;
+     text-decoration:none;
+ }
+
+ #buddy{
+     color:aquamarine;
+     font-size: 20px;
+     text-align: center;
+     font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+
+
+        </style>
+    </head>
+    <body>
+<div>
+        <div id="d3">
+            <a href="stonegamehome.html">back</a>
+            <a href="samplestone.html">play</a>
+        </div>
+<div id="d1">
+    <form  action="samplestone.html">
+        <label>enter your name</label><br>
+        <input type="text" placeholder="your name" id="sa"/>
+        <br>
+        <label for="rounds">enter your friend name</label><br>
+        <input type="text" id="friend" placeholder="your opponent" /><br>
+        <input type="submit" onClick="store()"  placeholder="submit"/>
+            <br>
+        </form>
+</div>
+
+<h2 style="text-align:center;position: relative;top:600px;font-size: 20px;">Buddy here</h2>
+
+<div id="d2">
+<p id="buddy">Are you got bored all the day long<br>
+Don't worry my friend lets play stone paper scissor </p>
+</div>
+</div>
+    </body>
+    <script type="text/javascript">
+
+        window.oncontextmenu=()=>{
+            return false;
+        }
+
+       
+
+var me=document.getElementById("sa").value;
+        var mine=localStorage.getItem("me");
+        var fri=document.getElementById("friend").value;
+        var frie=localStorage.getItem("friend");
+        var fri=document.getElementById("friend").value;
+        var mee=document.getElementById("buddy");
+      
+         setTimeout(()=>{
+             mee.innerHTML=`hey you can play with your virtual friend, give a name and have fun playing
+ stone paper scissor with your new buddy `;
+},4000)
+      
+     
+function store(){
+
+    var me=document.getElementById("sa").value;
+        var fri=document.getElementById("friend").value;
+        var mee=document.getElementById("buddy");
+
+        localStorage.setItem("me",me);
+        localStorage.setItem("friend",fri);
+    
+    }
+    
+    </script>
+    </html>
