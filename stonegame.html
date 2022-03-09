@@ -328,9 +328,9 @@ h1{
 
 
     var me=localStorage.getItem("me");
-    var friend=localStorage.getItem("friend");
 
-    //var rounds=prompt("enter no of rounds to play");
+    
+    var rounds=parseInt(localStorage.getItem("friend"));
 
 var mseg1=document.getElementById("msg1");
 
@@ -347,7 +347,7 @@ var cou2=document.getElementById("count2");
 var cou3=document.getElementById("count3");
 let count1=0;
 let count2=0;
-let count3=0;
+let count3=1;
 
 /*window.oncontextmenu=()=>{
             return false;
