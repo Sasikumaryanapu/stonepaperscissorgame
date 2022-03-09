@@ -11,8 +11,6 @@
      body{
         background-image:url("tie.png") ;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: cover;
         margin:0px;
     
     }
@@ -21,7 +19,6 @@
          width:100px;
          height:700px;
          margin:0px;
-      
           }
 
 
@@ -36,7 +33,7 @@
 
         button{
             width:105px;
-            height:105px;
+            height: 105px;
             border: 2px solid lime;
          border-radius: 50%;
          outline:none;
@@ -44,7 +41,7 @@
 
         #btn{
             position: relative;
-            top:10px;
+            top:-12px;
         }
      
      #message{
@@ -58,23 +55,22 @@
          display: flex;
          flex-direction:row;
          position: relative;
-         top:3px;
-      
+         top:-20px;
      }
 
      #computer{
-
+    
          position: relative;
          left:280px;
-         top: -360px;
+         top: -406px;
      }
 
      
      #score{
-         font-size: 20px;
+         font-size: 30px;
          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
          position: relative;
-         top:-450px;
+         top:-500px;
          display: flex;
          flex-direction: row;
         
@@ -83,13 +79,21 @@
 
      h1{
          position: relative;
-         top:-10px;
+         top:-20px;
          left: 200px;
          color:powderblue;
          font-size:20px;
          font-family: 'Courier New', Courier, monospace;
-         text-align:center;
          text-decoration:underline;
+     }
+
+     h3{
+        color: black;
+        font-size:30px;
+        text-align: center;
+        position: relative;
+        top:-440px;
+        left: 136px;
      }
 
     .stonemove1{
@@ -158,7 +162,6 @@
     @keyframes scmove2 {
         from{position: relative;left:0px}
         to{position: relative;left:70px}
-     
          }
 
     .papermove2{
@@ -175,18 +178,93 @@
         to{position: relative;left:70px}
          }
      
+
+@media screen and (orientation:landscape) {
+
+body{
+    margin:0px;
+}
+
+input{
+     color:transparent;
+     width: 73px;
+     height: 73px;
+     border: 2px solid lime;
+     border-radius: 50%;
+     outline:none;
+     
+    }
+
+    button{
+        width:80px;
+        height:80px;
+        border: 2px solid lime;
+        border-radius: 50%;
+        outline:none;
+        
+    }
+
+h1{
+    font-size: xx-large;
+    position:relative;
+    left:470px;
+    top: 100px;;
+}
+
+      #btn{
+            position: relative;
+            top:-170px;
+        }
+
+#computer{
+    
+    position: relative;
+    left:280px;
+    top: -480px;
+}
+#message{
+     color:white;
+     height: 45px;
+     width:800px;
+     text-align: center;
+     padding: 2px;
+     background-color: rgb(139, 192, 192);
+     font-size:20px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     justify-content:space-around;
+     display: flex;
+     flex-direction:row;
+     position: relative;
+     top:-180px;
+ }
+
+#score{
+     font-size: 30px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     position: relative;
+     top:-605px;
+     display: flex;
+     flex-direction: row;
+ }
+
+ h3{
+    color:black;
+    font-size:30px;
+    text-align: center;
+    position: relative;
+    top: -532px;
+    left:120px
+ }
+ 
+}
         
  </style>
 </head>
 <body>
 <div id="dis">
-    <button onClick="light()" style="width:40px;height:30px;"   id="theme1"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
-  <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-</svg></button>
-    <button onClick="dark()" style="width:40px;height:30px;"  id="theme2"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
-  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-</svg></button>
-    <h1>ROCK SCISSOR PAPER</h1>
+    <button onClick="light()"  style="color:black;background-color:aqua;width:40px;height:30px;border:1px solid aqua;border-radius:50%;" id="theme1">light</button>
+    <button onClick="dark()"  style="color:white;background-color:black;width:40px;height:30px;border:1px solid aqua;border-radius:50%;" id="theme2">dark</button>
+    <h1>STONE SCISSOR PAPER</h1>
     <div id="message">
     <p><span id="count3">Round</span></p>
     <p><span id="msg1"></span></p>
@@ -195,35 +273,36 @@
     <div id="btn">
     <button style="background-image:url('stonee.png');
     background-size: cover;background-repeat: no-repeat;background-position: 0%;"  id="stone" ></button>
-    <label></label>
+    <label>stone</label>
     <br>
     <button style="background-image:url('scissors.png');
     background-size: cover;background-repeat: no-repeat;background-position: 0%;" id="scissor"></button>
-    <label></label>
+    <label>scissor</label>
     <br>
     <button style="background-image:url('paperp.png');
     background-size: cover;background-repeat: no-repeat;background-position: 0%;" id="paper" ></button>
+    <label>paper</label>
     </div>
 
     <div id="computer">
     <br>
-    <input type="number" id="R1" placeholder="name" readonly value="3" style="background-image:url('stonee.png');
+    <input type="number" id="R1" placeholder="stone" readonly value="3" style="background-image:url('stonee.png');
     background-size: cover;background-repeat: no-repeat;background-position:0%;" />
-    <label></label>
+    <label>stone</label>
     <br>
-    <input type="number" id="S1" placeholder="name" readonly value="2" style="background-image:url('scissors.png');
+    <input type="number" id="S1" placeholder="scissor" readonly value="2" style="background-image:url('scissors.png');
     background-size: cover;background-repeat: no-repeat;background-position:0%;"/>
-    <label></label>
+    <label>scissor</label>
     <br>
-    <input type="number" id="P1" placeholder="name" readonly value="1" style="background-image:url('paperp.png');
+    <input type="number" id="P1" placeholder="paper" readonly value="1" style="background-image:url('paperp.png');
     background-size: cover;background-repeat: no-repeat;background-position:0%;"/>
-    <label></label>
+    <label>paper</label>
     </div>
 
-    <h3 style="color:black;font-size:30px;text-align: center;position: relative;top:-400px;left:130px;">score</h3>
+    <h3>score</h3>
     <div id="score">
-    <p id="player"><span id="count1" style="position: relative;left: 5px;">player</span></p>
-    <p><span id="count2" style="position: relative;left: 260px;">Ellie</span></p>
+    <p id="player"><span id="count1" style="position: relative;left: 20px;">player</span></p>
+    <p><span id="count2" style="position: relative;left: 190px;">Ellie</span></p>
     </div>
 </div>
 </body>
@@ -234,7 +313,7 @@
      document.body.style.backgroundColor="aqua";
      document.body.style.Color="lime";
      document.getElementById("count1").style.color="black";
-     document.getElementById("count2").style.color="black";
+     document.getElementById("count1").style.color="black";
      }
      
  
@@ -251,7 +330,7 @@
     var me=localStorage.getItem("me");
     var friend=localStorage.getItem("friend");
 
-    var rounds=prompt("enter no of rounds to play");
+    //var rounds=prompt("enter no of rounds to play");
 
 var mseg1=document.getElementById("msg1");
 
@@ -270,9 +349,9 @@ let count1=0;
 let count2=0;
 let count3=0;
 
-window.oncontextmenu=()=>{
+/*window.oncontextmenu=()=>{
             return false;
-        }
+        }*/
 
         window.onkeydown=()=>{
             return false;
@@ -301,14 +380,12 @@ stone.addEventListener('click',()=>{
         r2.classList.remove("stonemove2");
         s1.classList.remove("scissormove1");},2000)
 
-
-
     }
     else if(r1.value>a[index] && a[index]!=2)
     {
         count2++;
-        cou2.innerHTML=` ${friend}:${count2}`;
-        mseg1.innerHTML=` ${friend} won`;
+        cou2.innerHTML=` Ellie:${count2}`;
+        mseg1.innerHTML=` Ellie won`;
         p1.classList.add("papermove1");
         r2.classList.add("stonemove2");
         cou3.innerText=`Round :${count3++}`;
@@ -336,17 +413,19 @@ stone.addEventListener('click',()=>{
 
            },4000)
 
-           
+           localStorage.removeItem("me");
+           localStorage.removeItem("friend");
          
         }
         else{
             
-           mseg1.innerHTML=`${friend} won `;
+           mseg1.innerHTML=`Ellie won `;
            setTimeout(()=>{
             location.reload();
 
            },4000)
-           
+           localStorage.removeItem("me");
+           localStorage.removeItem("friend");
         }
         
     }
@@ -388,8 +467,8 @@ scissor.addEventListener('click',()=>{
     }
     else if(s1.value<a[index]){
         count2++;
-        cou2.innerHTML=` ${friend}:${count2}`;
-        mseg1.innerHTML=` ${friend} won`;
+        cou2.innerHTML=` Ellie:${count2}`;
+        mseg1.innerHTML=`Ellie won`;
         cou3.innerText=`Round :${count3++}`;
         s2.classList.add("scissormove2");
         r1.classList.add("stonemove1");
@@ -421,16 +500,18 @@ scissor.addEventListener('click',()=>{
             location.reload();
 
            },4000)
-           
+           localStorage.removeItem("me");
+           localStorage.removeItem("friend");
         }
         else{
             
-           mseg1.innerHTML=`${friend} won `;
+           mseg1.innerHTML=`Ellie won `;
            setTimeout(()=>{
             location.reload();
 
            },4000)
-           
+           localStorage.removeItem("me");
+           localStorage.removeItem("friend");
         }
         
     }
@@ -471,10 +552,9 @@ paper.addEventListener('click',()=>{
        
     }
     else if(p1.value<a[index] && a[index]!=3){
-        
         count2++;
-        cou2.innerHTML=` ${friend}:${count2}`;
-        mseg1.innerHTML=` ${friend} won`;
+        cou2.innerHTML=` Ellie:${count2}`;
+        mseg1.innerHTML=` Ellie won`;
         cou3.innerText=`Round :${count3++}`;
         s1.classList.add("scissormove1");
         p2.classList.add("papermove2");
@@ -506,16 +586,18 @@ paper.addEventListener('click',()=>{
             location.reload();
 
            },4000)
-           
+           localStorage.removeItem("me");
+           localStorage.removeItem("friend");
         }
         else{
             
-           mseg1.innerHTML=`${friend} won `;
+           mseg1.innerHTML=`Ellie won `;
            setTimeout(()=>{
             location.reload();
 
            },4000)
-           
+           localStorage.removeItem("me");
+           localStorage.removeItem("friend");
         }
         
     }
