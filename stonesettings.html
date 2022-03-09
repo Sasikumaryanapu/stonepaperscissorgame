@@ -14,6 +14,7 @@
             background-size: cover;
             background-position:center;
             background-attachment: fixed;
+            overflow: hidden;
         }
 
         div{
@@ -89,6 +90,27 @@
      text-align: center;
      font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
+    @media screen and (orientation:landscape){
+        
+        body{
+            overflow: hidden;
+        }
+
+        #d1{
+            position: relative;
+            top: 20px;
+        }
+
+        #d2{
+            position: relative;
+            top: -4px;
+        }
+
+        #d3{
+            position: relative;
+            top:-40px;
+        }
+    }
 
 
         </style>
@@ -97,10 +119,10 @@
 <div>
         <div id="d3">
             <a href="stonegamehome.html">back</a>
-            <a href="stonegame.html">play</a>
+            <a href="samplestone.html">play</a>
         </div>
 <div id="d1">
-    <form  action="stonegame.html">
+    <form  action="samplestone.html">
         <input type="text" placeholder="your name" id="sa"/>
         <br>
         <input type="text" id="friend" placeholder="no of rounds"/><br>
@@ -108,6 +130,8 @@
             <br>
         </form>
 </div>
+
+<h2 style="text-align:center;position: relative;top:600px;font-size: 20px;">Buddy here</h2>
 
 <div id="d2">
 <p id="buddy">Are you got bored all the day long<br>
