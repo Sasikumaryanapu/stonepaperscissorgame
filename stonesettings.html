@@ -34,13 +34,16 @@
 
             }
            
-            input[type="text"]{
+            input[type="text"],input[type="number"]{
                 width: 300px;
                 height: 30px;
-                border: 2px solid black;
-                border-radius: 25px;
+                border: none;
+                background-color: transparent;
+                color:aliceblue;
+                border-bottom: 5px solid aqua;
                 font-size: 20px;
                 outline: none;
+                padding: 6px;
             }
 
             label{
@@ -118,14 +121,13 @@
     <body>
 <div>
         <div id="d3">
-            <a href="stonegamehome.html">back</a>
+            <a href="index.html">back</a>
             <a href="stonegame.html">play</a>
         </div>
 <div id="d1">
     <form  action="stonegame.html">
-        <input type="text" placeholder="your name" id="sa"/>
-        <br>
-        <input type="text" id="friend" placeholder="no of rounds"/><br>
+        <input type="text" placeholder="your name"  id="sa"/><br>
+        <input type="number" id="friend" default="3" placeholder="no of rounds"/><br>
         <input type="submit" onClick="store()"  placeholder="submit"/>
             <br>
         </form>
@@ -147,26 +149,34 @@ Don't worry my friend lets play stone paper scissor </p>
 
        
 
-var me=document.getElementById("sa").value;
+        var me=document.getElementById("sa").value;
         var mine=localStorage.getItem("me");
         var fri=document.getElementById("friend").value;
         var frie=localStorage.getItem("friend");
         var mee=document.getElementById("buddy");
       
+      
+
          setTimeout(()=>{
-             mee.innerHTML=`hey you can play with your virtual friend, give a name and have fun playing
+             mee.innerHTML=`hey you can play with your virtual friend Ellie,have fun playing
  stone paper scissor with your new buddy `;
 },4000)
       
      
 function store(){
 
-    var me=document.getElementById("sa").value;
+        var me=document.getElementById("sa").value;
         var fri=document.getElementById("friend").value;
         var mee=document.getElementById("buddy");
 
         localStorage.setItem("me",me);
         localStorage.setItem("friend",fri);
+
+        /*var r=document.getElementsById("re");
+      if(me=="sasi"){
+      r.innerHTML="name required";
+      alert("hi");
+      }*/
     
     }
     
